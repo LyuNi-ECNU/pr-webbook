@@ -23,41 +23,24 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://LyuNi-ECNU.github.io/pr-webbook/intro.html
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: gh-pages  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/LyuNi-ECNU/pr-webbook  # ✅ 源码仓库地址（关键修正）
+  path_to_book: docs  
+  branch: master  # ✅ 代码所在分支（关键修正）
 
 # Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
   launch_buttons:
-    thebe: true
-    binderhub_url: "https://mybinder.org"  # 公共 Binder 服务地址
-    binder_repo_url: https://github.com/LyuNi-ECNU/pr-webbook  # 你的源码仓库
-    binder_branch: master  # 代码所在分支
-    binder_path_to_notebook: docs  # 代码文件在 docs 目录（和 path_to_book 一致）
-
-
+    thebe: true  # 仅保留 thebe，Binder 配置移到 sphinx 层
 
 parse:
   myst_enable_extensions:
-    # don't forget to list any other extensions you want enabled,
-    # including those that are enabled by default!
     - amsmath
-    # - attrs_inline
     - colon_fence
     - deflist
     - dollarmath
-    # - fieldlist
     - html_admonition
-    # - html_image
-    # - linkify
-    # - replacements
-    # - smartquotes
-    # - strikethrough
-    # - substitution
     - tasklist
 
 sphinx:
@@ -67,10 +50,15 @@ sphinx:
     html_js_files:
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     html_theme_options:
+      # ✅ 核心：Binder 配置移到这里（主题层，必生效）
       launch_buttons:
         binderhub_url: "https://mybinder.org"
+        binder_repo_url: "https://github.com/LyuNi-ECNU/pr-webbook"
+        binder_branch: "master"
+        binder_path_to_notebook: "docs"
+        binder_url_template: "https://mybinder.org/v2/gh/{repo}/{branch}?filepath={path}"  # ✅ 强制链接模板
         thebe: true
-      # 主题层面的仓库链接，必须指向你的仓库
+      # 仓库基础配置
       repository_url: https://github.com/LyuNi-ECNU/pr-webbook
       repository_branch: master
       use_edit_page_button: true
@@ -81,18 +69,3 @@ sphinx:
     - sphinx_proof
     - sphinx_design
     - sphinx_togglebutton
-# https://sphinx-book-theme.readthedocs.io/en/stable/reference/extensions.html
-# This is a extension which can be used to add sphinx-book-theme to the book.
-# Marked by Deralive
-
-# https://sphinx-thebe.readthedocs.io/en/latest/configure.html
-# 将按钮嵌入至书中，允许用户在浏览器中运行代码
-
-# https://diler-digitell.github.io/tutorial_jupyter_books/content/3_create/media.html
-# This is a extension which can be used to add media files to the book.
-# Marked by Deralive
-
-# https://jupyterbook.org/en/stable/content/code-outputs.html
-# This is a extension which can be used to add code outputs to the book.
-# Marked by Deralive
-
