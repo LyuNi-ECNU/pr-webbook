@@ -39,6 +39,6 @@ uv run jupyter-book build docs --all # 强制重新构建
 uv run ghp-import -n -p -f docs/_build/html 
 ```
 ## Github Pages 直接阅读和下载电子书
-您可以访问https://lyuni-ecnu.github.io/pr-webbook/intro.html阅读或下载电子书。
+您可以访问https://lyuni-ecnu.github.io/pr-webbook/intro.html 阅读或下载电子书。
 
 
