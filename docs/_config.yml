@@ -23,7 +23,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://deralive.github.io/pr-webbook/intro.html
+  url: https://LyuNi-ECNU.github.io/pr-webbook/intro.html
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: gh-pages  # Which branch of the repository should be used when creating links (optional)
 
@@ -68,7 +68,7 @@ sphinx:
         binderhub_url: "https://mybinder.org" # 公共 Binder 服务
         thebe: true
 
-      repository_url: https://github.com/Deralive/pr-webbook
+      repository_url: https://github.com/LyuNi-ECNU/pr-webbook
       repository_branch: master
 
       # 在代码单元格右上角显示 "在 Binder 中打开" 的图标
