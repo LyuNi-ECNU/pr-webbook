@@ -34,6 +34,11 @@ html:
   use_repository_button: true
   launch_buttons:
     thebe: true
+    binderhub_url: "https://mybinder.org"  # 公共 Binder 服务地址
+    binder_repo_url: https://github.com/LyuNi-ECNU/pr-webbook  # 你的源码仓库
+    binder_branch: master  # 代码所在分支
+    binder_path_to_notebook: docs  # 代码文件在 docs 目录（和 path_to_book 一致）
+
 
 
 parse:
