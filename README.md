@@ -1,5 +1,12 @@
 # Probability Theory and Mathematical Statistics Web-book
 
+## 在线阅读与代码运行
+
+您可以访问 [电子书主页面](https://lyuni-ecnu.github.io/pr-webbook/intro.html) 阅读电子书。
+
+> [!TIP]
+> 在有代码的页面，点击右上角 **Live Code** 按钮启动 Python Binder 内核，静待启动完成即可执行代码。
+
 ## 版权说明
 
 本项目及其所有相关内容，包括但不限于文本、代码、图像及构建的网站，其版权均归作者所有。
@@ -38,7 +45,4 @@ uv run jupyter-book build docs --all # 强制重新构建
 ```bash
 uv run ghp-import -n -p -f docs/_build/html 
 ```
-## Github Pages 直接阅读和下载电子书
-您可以访问https://lyuni-ecnu.github.io/pr-webbook/intro.html 阅读或下载电子书。
-
 
