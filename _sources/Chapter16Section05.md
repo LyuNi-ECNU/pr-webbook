@@ -207,11 +207,9 @@ $$
 \begin{eqnarray*}
 p_{Y}(y)&=&\int_{0}^{1-y} p(y, u) \text{d} u\\
 &=&\int_{0}^{1-y} \frac{n !}{(k-1) !(s-k-1) !(n-s) !} u^{k-1} y^{s-k-1}(1-u-y)^{n-s} \text{d} u\\
-&\overset{u=(1-y)v}{=}&\frac{n !}{(k-1) !(s-k-1) !(n-s) !}\\
-&&\cdot\int_{0}^{1} (1-y)^{k-1} v^{k-1} y^{s-k-1}(1-y)^{n-s}(1-v)^{n-s}(1-y) \text{d} v\\
+&\overset{u=(1-y)v}{=}&\frac{n !}{(k-1) !(s-k-1) !(n-s) !}\cdot\int_{0}^{1} (1-y)^{k-1} v^{k-1} y^{s-k-1}(1-y)^{n-s}(1-v)^{n-s}(1-y) \text{d} v\\
 &=&y^{s-k-1}(1-y)^{n-s+k} \int_{0}^{1} \frac{n !}{(k-1) !(s-k-1) !(n-s) !} v^{k-1}(1-v)^{n-s} \text{d} v\\
-&=& y^{s-k-1}(1-y)^{n-s+k} \cdot \frac{n!}{{(k-1)!}(s-k-1)!{(n-s)!}}\cdot \frac{{(k-1)!}{(n-s)!}}{(n+k-s)!}\\
-&& \int_{0}^{1} \frac{\Gamma(n+k-s+1)}{\Gamma(k) \Gamma(n-s+1)} v^{k-1}(1-v)^{(n-s+1)-1} \text{d} v\\
+&=& y^{s-k-1}(1-y)^{n-s+k} \cdot \frac{n!}{{(k-1)!}(s-k-1)!{(n-s)!}}\cdot \frac{{(k-1)!}{(n-s)!}}{(n+k-s)!} \int_{0}^{1} \frac{\Gamma(n+k-s+1)}{\Gamma(k) \Gamma(n-s+1)} v^{k-1}(1-v)^{(n-s+1)-1} \text{d} v\\
 &=&\frac{\Gamma(n+1)}{\Gamma(s-k) \Gamma(n-s+k+1)} y^{(s-k)-1}(1-y)^{(n-s+k+1)-1}
 \end{eqnarray*}
 $$
@@ -239,7 +237,7 @@ $$F_{n}(x)=\frac{1}{n} \sum_{i=1}^{n} I_{\left\{x_{i} \leq x\right\}}=\frac{1}{n
 
 $$
 m_{0.5} = \left\{\begin{aligned}
-& x_{\left(\frac{n+1}{2}\right)} & n\text{为奇数}, \\
+& x_{\left(\frac{n+1}{2}\rigt)} & n\text{为奇数}, \\
 &\frac{1}{2}\left(x_{\left(\frac{n}{2}\right)}+x_{\left(\frac{n}{2}+1\right)}\right) & n\text{为偶数}.
 \end{aligned}
 \right.
