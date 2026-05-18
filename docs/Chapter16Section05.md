@@ -141,8 +141,7 @@ $$
 
 $$
 \begin{eqnarray*}
-p_{ij}(y,z) &=& \frac{n!}{(i-1)!(j-i-1)!(n-j)!} \\
-&&(F(y))^{i-1} (F(z)-F(y))^{j-i-1}(1-F(z))^{n-j}p(y)p(z), y\leq z.
+p_{ij}(y,z) &=& \frac{n!}{(i-1)!(j-i-1)!(n-j)!} (F(y))^{i-1} (F(z)-F(y))^{j-i-1}(1-F(z))^{n-j}p(y)p(z), y\leq z.
 \end{eqnarray*}
 $$
 
@@ -154,8 +153,7 @@ $$
 $$
 \begin{eqnarray*}
 &&P(x_{(i)}\in (y,y+\Delta y] , x_{(j)}\in (z,z+\Delta z]) \\
-&\approx& \frac{n!}{(i-1)!1!(j-i-1)!1!(n-j)!}(F(y))^{i-1} p(y)\Delta y\\
-&&(F(z) - F(y+\Delta y))^{j-i-1} p(z)\Delta z (1-F(z+\Delta z))^{n-j},
+&\approx& \frac{n!}{(i-1)!1!(j-i-1)!1!(n-j)!}(F(y))^{i-1} p(y)\Delta y (F(z) - F(y+\Delta y))^{j-i-1} p(z)\Delta z (1-F(z+\Delta z))^{n-j},
 \end{eqnarray*}
 $$
 
@@ -164,8 +162,7 @@ $$
 $$
 \begin{eqnarray*}
 p_{ij}(y,z) &=& \lim_{\Delta y \rightarrow 0,\Delta z \rightarrow 0} \frac{P(x_{(i)}\in (y,y+\Delta y] , x_{(j)}\in (z,z+\Delta z])}{\Delta y \cdot \Delta z}\\
-&=& \frac{n!}{(i-1)!1!(j-i-1)!1!(n-j)!}(F(y))^{i-1} p(y) \\
-&&(F(z) - F(y+\Delta y))^{j-i-1} p(z)(1-F(z+\Delta z))^{n-j}
+&=& \frac{n!}{(i-1)!1!(j-i-1)!1!(n-j)!}(F(y))^{i-1} p(y) (F(z) - F(y+\Delta y))^{j-i-1} p(z)(1-F(z+\Delta z))^{n-j}
 \end{eqnarray*}
 $$
 
