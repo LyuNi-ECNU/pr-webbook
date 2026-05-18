@@ -99,6 +99,7 @@ $$
 - 近似分布 2（蒙特卡洛分布）：如果 $x_{1},x_{2},\cdots,x_{5}$ 来自于指数分布 $Exp(1/5)$ ，那么 $\bar{x} = \frac{1}{5}\sum_{i=1}^5x_i$ 的蒙特卡洛分布应如图 {numref}`fig:Lect16_MC_dist_EXP` 所示。图中直方图刻画的是 $\bar{x}$ 的蒙特卡洛分布，而红线表示的是其真实的密度函数。
 ```{figure} /fig/Lect16_MC_dist_EXP.png
 :name: fig:Lect16_MC_dist_EXP
+:width: 400px 
 
 蒙特卡洛分布
 ```
