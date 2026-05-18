@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>17.2. 三种分布的构造方式 &#8212; “概率论与数理统计”课程笔记</title>
+    <title>单点分布 &#8212; “概率论与数理统计”课程笔记</title>
   
   
   
@@ -61,13 +61,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter17Section02';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter04Section02Subsection01';</script>
     <script src="_static/layout.js?v=7d0cb861"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="17.3. 正态分布下样本方差的分布" href="Chapter17Section03.html" />
-    <link rel="prev" title="17.1. 引导问题" href="Chapter17Section01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -130,6 +128,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,7 +178,7 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">概率部分</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter01.html">1. 概率</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter01Section01.html">1.1. 引导问题：盲盒为什么受欢迎？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter01Section02.html">1.2. 随机事件</a></li>
@@ -320,9 +320,9 @@
 <li class="toctree-l2"><a class="reference internal" href="Chapter16Section06.html">16.6. 习题</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter17.html">17. 三大抽样分布</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter17.html">17. 三大抽样分布</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter17Section01.html">17.1. 引导问题</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">17.2. 三种分布的构造方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter17Section02.html">17.2. 三种分布的构造方式</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter17Section03.html">17.3. 正态分布下样本方差的分布</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter17Section04.html">17.4. 习题</a></li>
 </ul>
@@ -461,7 +461,7 @@
       
       
       
-      <li><a href="https://github.com/LyuNi-ECNU/pr-webbook/edit/master/Chapter17Section02.md" target="_blank"
+      <li><a href="https://github.com/LyuNi-ECNU/pr-webbook/edit/master/Chapter04Section02Subsection01.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -478,7 +478,7 @@
       
       
       
-      <li><a href="https://github.com/LyuNi-ECNU/pr-webbook/issues/new?title=Issue%20on%20page%20%2FChapter17Section02.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/LyuNi-ECNU/pr-webbook/issues/new?title=Issue%20on%20page%20%2FChapter04Section02Subsection01.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -508,7 +508,7 @@
       
       
       
-      <li><a href="_sources/Chapter17Section02.md" target="_blank"
+      <li><a href="_sources/Chapter04Section02Subsection01.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -579,9 +579,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -592,21 +590,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>三种分布的构造方式</h1>
+    <h1>单点分布</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">17.2.1. 卡方分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f">17.2.2. <span class="math notranslate nohighlight">\(F\)</span> 分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t">17.2.3. <span class="math notranslate nohighlight">\(t\)</span> 分布</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -617,100 +605,22 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><span class="section-number">17.2. </span>三种分布的构造方式<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>在本讲中，首先我们介绍三种“新”的分布，这些分布都来自于用于估计和检验任务中常见的统计量。与之前学习思路不同，这些分布并不是来自于伯努利实验，也并不是通过数学推导而得的。这些分布是构造出来的，我们需要关注于这三个分布的构造方式。</p>
-<section id="id2">
-<h2><span class="section-number">17.2.1. </span>卡方分布<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>在第 6 讲中，我们已经证明了一个命题：标准正态分布 <span class="math notranslate nohighlight">\(X\sim N(0,1)\)</span> ，则 <span class="math notranslate nohighlight">\(X^2 \sim Ga(1/2,1/2)\)</span> 。我们将 <span class="math notranslate nohighlight">\(Ga(1/2,1/2)\)</span> 命名为卡方分布 <span class="math notranslate nohighlight">\(\chi^2(1)\)</span> 。另外，在第 9 讲中，我们也已经证明了一个命题：伽马分布具有可加性。于是，如果 <span class="math notranslate nohighlight">\(Y_1,Y_2,\cdots,Y_n\)</span> 独立同分布于 <span class="math notranslate nohighlight">\(Ga(1/2,1/2)\)</span> ，那么</p>
-<div class="math notranslate nohighlight">
-\[
-\sum_{i=1}^n Y_i \sim Ga(n/2,1/2).
-\]</div>
-<p>我们将 <span class="math notranslate nohighlight">\(Ga(n/2,1/2)\)</span> 命名为自由度为 <span class="math notranslate nohighlight">\(n\)</span> 的卡方分布，即 <span class="math notranslate nohighlight">\(\chi^2(n)\)</span> 。于是，我们可以有以下定义。</p>
+<h1>单点分布<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <dl class="simple myst">
-<dt>卡方分布</dt><dd><p>设 <span class="math notranslate nohighlight">\(X_1,X_2,\cdots,X_n\)</span> 独立同分布于标准正态分布 <span class="math notranslate nohighlight">\(N(0,1)\)</span> ，则称</p>
+<dt>单点分布</dt><dd><p>常量 <span class="math notranslate nohighlight">\(c\)</span> 可作为仅取一个值的随机变量 <span class="math notranslate nohighlight">\(X\)</span> ，即：</p>
 </dd>
 </dl>
 <div class="math notranslate nohighlight">
 \[
-\chi^2 = X_1^2 + X_2^2 + \cdots + X_n^2 = \sum_{i=1}^n X_i^2
+P(X = c) = 1
 \]</div>
-<p>的分布为自由度为 <span class="math notranslate nohighlight">\(n\)</span> 的 <span class="math notranslate nohighlight">\(\chi^2\)</span> 分布，记为 <span class="math notranslate nohighlight">\(\chi^2 \sim \chi^2(n)\)</span> 。</p>
-<p>根据伽马分布的期望和方差公式，我们知道，如果 <span class="math notranslate nohighlight">\(\chi^2 \sim \chi^2(n)\)</span> ，那么</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{eqnarray*}
-E(\chi^2) &amp;=&amp; n\\
-\text{Var}(\chi^2) &amp;=&amp; 2n
-\end{eqnarray*}
-\end{split}\]</div>
-<p>以下两个分布是建立在卡方分布之上。</p>
-</section>
-<section id="f">
-<h2><span class="section-number">17.2.2. </span><span class="math notranslate nohighlight">\(F\)</span> 分布<a class="headerlink" href="#f" title="Link to this heading">#</a></h2>
-<dl class="simple myst">
-<dt><span class="math notranslate nohighlight">\(F\)</span> 分布</dt><dd><p>设随机变量 <span class="math notranslate nohighlight">\(X_{1}\sim \chi^{2}(m),X_{2}\sim \chi^{2}(n)\)</span> ，且 <span class="math notranslate nohighlight">\(X_{1}\)</span> 与 <span class="math notranslate nohighlight">\(X_{2}\)</span> 独立，则称</p>
-</dd>
-</dl>
-<div class="math notranslate nohighlight">
-\[F=\frac{X_{1} /m }{X_{2}/n}\]</div>
-<p>的分布是自由度为 <span class="math notranslate nohighlight">\(m\)</span> 与 <span class="math notranslate nohighlight">\(n\)</span> 的 <span class="math notranslate nohighlight">\(F\)</span> 分布，记为 <span class="math notranslate nohighlight">\(F(m,n)\)</span> 。其中， <span class="math notranslate nohighlight">\(m\)</span> 为分子自由度， <span class="math notranslate nohighlight">\(n\)</span> 为分母自由度。</p>
-<div class="admonition-remark admonition">
-<p class="admonition-title">Remark</p>
-<ul class="simple">
-<li><p>根据增补变换法，可以推导 <span class="math notranslate nohighlight">\(F\)</span> 的密度函数为</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-p_F(y) = \frac{\Gamma\left(\frac{m+n}{2}\right) \left(\frac{m}{n}\right)^{\frac{m}{2}} }{\Gamma\left(\frac{m}{2}\right) \Gamma\left(\frac{n}{2}\right)} y^{\frac{m}{2}-1} \left(1+\frac{m}{n}y\right)^{-\frac{m+n}{2}}, y&gt;0.
-\]</div>
-<ul class="simple">
-<li><p>通过图像绘制， <span class="math notranslate nohighlight">\(F\)</span> 分布是一个偏态分布。</p></li>
-<li><p>易证：若 <span class="math notranslate nohighlight">\(F \sim F(m,n)\)</span> ，则 <span class="math notranslate nohighlight">\(1/F \sim F(n,m)\)</span> ；</p></li>
-<li><p><span class="math notranslate nohighlight">\(F\)</span> 分布分布数的性质。若 <span class="math notranslate nohighlight">\(F_{\alpha}(m,n)\)</span> 为自由度为 <span class="math notranslate nohighlight">\(m\)</span> 和 <span class="math notranslate nohighlight">\(n\)</span> 的 <span class="math notranslate nohighlight">\(F\)</span> 分布分位数。于是，若存在一个随机变量 <span class="math notranslate nohighlight">\(F \sim F(m,n)\)</span> ，则 <span class="math notranslate nohighlight">\(1/F\)</span> 也是一个 <span class="math notranslate nohighlight">\(F\)</span> 分布随机变量，其自由度分别为 <span class="math notranslate nohighlight">\(n\)</span> 和 <span class="math notranslate nohighlight">\(m\)</span> 。所以，</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\alpha = P\left(\frac{1}{F}\leq F_{\alpha}(n,m)\right)
-= P\left(F \geq \frac{1}{F_{\alpha}(n,m)}\right),
-\]</div>
-<p>从而</p>
-<div class="math notranslate nohighlight">
-\[
-P\left( F \leq \frac{1}{F_{\alpha}(n,m)}\right) =1-\alpha.
-\]</div>
-<p>因此，</p>
-<div class="math notranslate nohighlight">
-\[
-F_{1-\alpha} (m,n) = \frac{1}{F_{\alpha}(n,m)}.
-\]</div>
-</div>
-</section>
-<section id="t">
-<h2><span class="section-number">17.2.3. </span><span class="math notranslate nohighlight">\(t\)</span> 分布<a class="headerlink" href="#t" title="Link to this heading">#</a></h2>
-<dl class="simple myst">
-<dt><span class="math notranslate nohighlight">\(t\)</span> 分布</dt><dd><p>设随机变量 <span class="math notranslate nohighlight">\(X_1\)</span> 与 <span class="math notranslate nohighlight">\(X_2\)</span> 独立且 <span class="math notranslate nohighlight">\(X_1\sim N(0,1),X_2\sim \chi^2(n)\)</span> ，则称</p>
-</dd>
-</dl>
-<div class="math notranslate nohighlight">
-\[t=\frac{X_{1}}{\sqrt{X_{2}/n } } \]</div>
-<p>的分布为自由度为 <span class="math notranslate nohighlight">\(n\)</span> 的 <span class="math notranslate nohighlight">\(t\)</span> 分布，记为 <span class="math notranslate nohighlight">\(t\sim t(n)\)</span> 。</p>
-<div class="admonition-remark admonition">
-<p class="admonition-title">Remark</p>
-<ul class="simple">
-<li><p>根据增补变换法，可以推导 <span class="math notranslate nohighlight">\(t\)</span> 的密度函数为</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-p_t(y) = \frac{\Gamma\left(\frac{n+1}{2} \right)}{\sqrt{n\pi}\Gamma\left(\frac{n}{2}\right)} \left(1 + \frac{y^2}{n}\right)^{-\frac{n+1}{2}}, -\infty &lt; y &lt; \infty.
-\]</div>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(t\)</span> 分布的密度函数 vs 标准正态分布的密度函数。</p></li>
-<li><p><span class="math notranslate nohighlight">\(t\)</span> 分布的密度函数和标准正态分布的密度函数均为偶函数，形状类似。</p></li>
-<li><p>特别当 <span class="math notranslate nohighlight">\(n\)</span> 比较小时，尾部概率比标准正态分布的大一些。</p></li>
-</ul>
-</div>
-</section>
+<p>这个分布称为<strong>单点</strong>分布或<strong>退化</strong>分布，其图象见图 <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig04-b</span></code> 所示。</p>
+<figure class="align-default" id="fig04-b">
+<img alt="_images/Chap4_cdf_of_degenerate_distribution.png" src="_images/Chap4_cdf_of_degenerate_distribution.png" />
+<figcaption>
+<p><span class="caption-text">单点分布的分布函数</span><a class="headerlink" href="#fig04-b" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 
     <script type="text/x-thebe-config">
@@ -743,47 +653,12 @@ p_t(y) = \frac{\Gamma\left(\frac{n+1}{2} \right)}{\sqrt{n\pi}\Gamma\left(\frac{n
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Chapter17Section01.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">17.1. </span>引导问题</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="Chapter17Section03.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">17.3. </span>正态分布下样本方差的分布</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">17.2.1. 卡方分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f">17.2.2. <span class="math notranslate nohighlight">\(F\)</span> 分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t">17.2.3. <span class="math notranslate nohighlight">\(t\)</span> 分布</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
