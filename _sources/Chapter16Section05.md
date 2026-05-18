@@ -62,6 +62,7 @@ $$
 于是，定理得证。
 
 ````{prf:lemma}
+:label: lem:chap16_sum_equal_int
 
 对于 $0<p<1$ ，有
 
