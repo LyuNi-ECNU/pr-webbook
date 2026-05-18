@@ -32,10 +32,12 @@ parts:
         sections:
           - file: Chapter04Section01
           - file: Chapter04Section02
+            sections:
+              - file: Chapter04Section02Subsection01
+              - file: Chapter04Section02Subsection02
+              - file: Chapter04Section02Subsection03
+              - file: Chapter04Section02Subsection04
           - file: Chapter04Section03
-          - file: Chapter04Section04
-          - file: Chapter04Section05
-          - file: Chapter04Section06
       - file: Chapter05
         sections:
           - file: Chapter05Section01
