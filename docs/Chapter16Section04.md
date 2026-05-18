@@ -152,7 +152,7 @@ for i, n in enumerate(sample_sizes):
         skewness_results[k, i] = np.quantile(skewnesses, p)
         kurtosis_results[k, i] = np.quantile(kurtosises, p)
 
-fig = plt.figure(figsize=(10, 6))
+fig = plt.figure(figsize=(15, 10))
 gs = gridspec.GridSpec(2, 2, figure=fig)
 
 # Plot distribution of sample means
