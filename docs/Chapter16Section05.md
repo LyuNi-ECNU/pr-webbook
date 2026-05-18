@@ -238,7 +238,7 @@ $$F_{n}(x)=\frac{1}{n} \sum_{i=1}^{n} I_{\left\{x_{i} \leq x\right\}}=\frac{1}{n
 $$
 m_{0.5} = \left\{
 \begin{aligned}
-& x_{\left(\frac{n+1}{2}\rigt)} & n\text{为奇数}, \\
+& x_{\left(\frac{n+1}{2}\right)} & n\text{为奇数}, \\
 &\frac{1}{2}\left(x_{\left(\frac{n}{2}\right)}+x_{\left(\frac{n}{2}+1\right)}\right) & n\text{为偶数}.
 \end{aligned}
 \right.
