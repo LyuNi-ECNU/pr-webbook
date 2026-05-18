@@ -53,7 +53,7 @@ F_k(x)
 \end{eqnarray*}
 $$
 
-根据引理 2.1，我们可知
+根据 {prf:ref}`lem:chap16_sum_equal_int`，我们可知
 
 $$
 F_k(x) = \int_{0}^{F(x)} \frac{n!}{(k-1)!(n-k)!} x^{k-1}(1-x)^{n-k}\text{d}x.
