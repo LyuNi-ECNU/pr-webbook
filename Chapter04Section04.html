@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4.3. 几何分布与负二项分布 &#8212; “概率论与数理统计”课程笔记</title>
+    <title>4.4. 几何分布与负二项分布 &#8212; “概率论与数理统计”课程笔记</title>
   
   
   
@@ -36,7 +36,6 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/layout.css?v=0b635d3f" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -62,12 +61,11 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter04Section04';</script>
-    <script src="_static/layout.js?v=7d0cb861"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4.4. 泊松分布" href="Chapter04Section05.html" />
-    <link rel="prev" title="4.2. 二项分布与二点分布" href="Chapter04Section03.html" />
+    <link rel="next" title="4.5. 泊松分布" href="Chapter04Section05.html" />
+    <link rel="prev" title="4.3. 二项分布与二点分布" href="Chapter04Section03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -205,23 +203,17 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter04.html">4. 一元离散随机变量</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Chapter04Section01.html">4.1. 概率分布列</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter04Section03.html">4.2. 二项分布与二点分布</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.3. 几何分布与负二项分布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter04Section05.html">4.4. 泊松分布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter04Section06.html">4.5. 习题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter04Section02.html">4.2. 单点分布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter04Section03.html">4.3. 二项分布与二点分布</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.4. 几何分布与负二项分布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter04Section05.html">4.5. 泊松分布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter04Section06.html">4.6. 习题</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter05.html">5. 一元连续随机变量</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section01.html">5.1. 引导问题：对于早八点的课程，学生何时能到教室？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section02.html">5.2. 概率密度函数</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Chapter05Section03.html">5.3. 常见的连续随机变量</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection01.html">5.3.1. 均匀分布</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection02.html">5.3.2. 正态分布</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection03.html">5.3.3. 指数分布</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection04.html">5.3.4. 伽马分布</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection05.html">5.3.5. 贝塔分布</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter05Section03.html">5.3. 常见的连续随机变量</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section04.html">5.4. 习题</a></li>
 </ul>
 </details></li>
@@ -444,7 +436,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/LyuNi-ECNU/pr-webbook/master?urlpath=tree/Chapter04Section04.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/Deralive/pr-webbook/master?urlpath=tree/Chapter04Section04.md" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -493,7 +485,7 @@
       
       
       
-      <li><a href="https://github.com/LyuNi-ECNU/pr-webbook" target="_blank"
+      <li><a href="https://github.com/Deralive/pr-webbook" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -510,7 +502,7 @@
       
       
       
-      <li><a href="https://github.com/LyuNi-ECNU/pr-webbook/edit/master/Chapter04Section04.md" target="_blank"
+      <li><a href="https://github.com/Deralive/pr-webbook/edit/master/Chapter04Section04.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -527,7 +519,7 @@
       
       
       
-      <li><a href="https://github.com/LyuNi-ECNU/pr-webbook/issues/new?title=Issue%20on%20page%20%2FChapter04Section04.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Deralive/pr-webbook/issues/new?title=Issue%20on%20page%20%2FChapter04Section04.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -671,7 +663,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><span class="section-number">4.3. </span>几何分布与负二项分布<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4.4. </span>几何分布与负二项分布<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <dl class="simple myst">
 <dt>几何分布</dt><dd><p>假定伯努利试验中成功（事件 <span class="math notranslate nohighlight">\(A\)</span> )概率为 <span class="math notranslate nohighlight">\(p\)</span> 。记 <span class="math notranslate nohighlight">\(X\)</span> 为伯努利试验首次成功的次数，其分布列为：</p>
 </dd>
@@ -824,7 +816,7 @@ X_i \overset{\text{i.i.d}}{\sim} Ge(p) ,
     {
         requestKernel: true,
         binderOptions: {
-            repo: "LyuNi-ECNU/pr-webbook",
+            repo: "Deralive/pr-webbook",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -856,7 +848,7 @@ X_i \overset{\text{i.i.d}}{\sim} Ge(p) ,
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.2. </span>二项分布与二点分布</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>二项分布与二点分布</p>
       </div>
     </a>
     <a class="right-next"
@@ -864,7 +856,7 @@ X_i \overset{\text{i.i.d}}{\sim} Ge(p) ,
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.4. </span>泊松分布</p>
+        <p class="prev-next-title"><span class="section-number">4.5. </span>泊松分布</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

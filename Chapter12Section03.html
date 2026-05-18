@@ -205,10 +205,14 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter04.html">4. 一元离散随机变量</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter04Section01.html">4.1. 概率分布列</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter04Section03.html">4.2. 二项分布与二点分布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter04Section04.html">4.3. 几何分布与负二项分布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter04Section05.html">4.4. 泊松分布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter04Section06.html">4.5. 习题</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="Chapter04Section02.html">4.2. 常用的离散型随机变量</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="Chapter04Section02Subsection01.html">4.2.1. 单点分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter04Section02Subsection02.html">4.2.2. 二项分布与二点分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter04Section02Subsection03.html">4.2.3. 几何分布与负二项分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter04Section02Subsection04.html">4.2.4. 泊松分布</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter04Section03.html">4.3. 习题</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter05.html">5. 一元连续随机变量</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -606,7 +610,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1><span class="section-number">12.3. </span>按分布收敛<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>在学习泊松分布时，泊松分布是二项分布的一种近似，见定理 <a class="reference internal" href="Chapter04Section05.html#thm04-d">Theorem 4.4</a> 。若设 <span class="math notranslate nohighlight">\(X_n \sim b(n,p_n)\)</span> ，其分布函数为 <span class="math notranslate nohighlight">\(F_n(x)\)</span> ，且 <span class="math notranslate nohighlight">\(X \sim P(\lambda)\)</span> ， <span class="math notranslate nohighlight">\(p=\lim_{n\rightarrow} np_n\)</span> ，其分布函数为 <span class="math notranslate nohighlight">\(F(x)\)</span> 。
+<p>在学习泊松分布时，泊松分布是二项分布的一种近似，见定理 <a class="reference internal" href="Chapter04Section02Subsection04.html#thm04-d">Theorem 4.4</a> 。若设 <span class="math notranslate nohighlight">\(X_n \sim b(n,p_n)\)</span> ，其分布函数为 <span class="math notranslate nohighlight">\(F_n(x)\)</span> ，且 <span class="math notranslate nohighlight">\(X \sim P(\lambda)\)</span> ， <span class="math notranslate nohighlight">\(p=\lim_{n\rightarrow} np_n\)</span> ，其分布函数为 <span class="math notranslate nohighlight">\(F(x)\)</span> 。
 对于分布函数序列 <span class="math notranslate nohighlight">\(\{F_n(x)\}\)</span> ，根据泊松定理可知，当 <span class="math notranslate nohighlight">\(n\)</span> 充分大时，其收敛到一个极限分布函数 <span class="math notranslate nohighlight">\(F(x)\)</span> 。</p>
 <div class="admonition-question admonition">
 <p class="admonition-title">Question</p>
