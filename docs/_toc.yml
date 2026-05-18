@@ -44,6 +44,9 @@ parts:
             sections:
               - file: Chapter05Section03Subsection01
               - file: Chapter05Section03Subsection02
+              - file: Chapter05Section03Subsection03
+              - file: Chapter05Section03Subsection04
+              - file: Chapter05Section03Subsection05
           - file: Chapter05Section04
       - file: Chapter06
         sections:
