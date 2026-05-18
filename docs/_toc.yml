@@ -43,6 +43,7 @@ parts:
           - file: Chapter05Section03
             sections:
               - file: Chapter05Section03Subsection01
+              - file: Chapter05Section03Subsection02
           - file: Chapter05Section04
       - file: Chapter06
         sections:
