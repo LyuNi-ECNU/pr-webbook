@@ -60,7 +60,10 @@ sphinx:
   config:
     nb_execution_show_tb: True # Show activate execution tracebacks，将执行错误的跟踪信息打印到终端，而非保存在日志文件中
     html_extra_path: [ './videos' ]
+    html_css_files:
+      - layout.css
     html_js_files:
+      - layout.js
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js # 国外 Cloudflare CDN
 #      - https://cdn.bootcdn.net/ajax/libs/require.js/2.3.4/require.min.js # 国内 CDN
     html_theme_options:
