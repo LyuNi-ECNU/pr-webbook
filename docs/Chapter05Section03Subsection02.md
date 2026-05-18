@@ -4,7 +4,7 @@
 : 设定义在区间 $(-\infty,\infty)$ 的一个随机变量 $X$ 。 $X$ 的概率密度函数为：
 
 $$
-p(x) =\frac{1}{\sqrt{2\pi \sigma^2}}\exp\left\{-\frac{1}{2\sigma^2} (x-\mu)^2\right\}, x \in R
+p(x) =\frac{1}{\sqrt{2\pi \sigma^2}} \exp\left\{-\frac{1}{2\sigma^2} (x-\mu)^2\right\}, x \in R
 $$
 
 称 $X$ 的分布为正态分布。记 $X\sim N(\mu,\sigma^2)$ ，其中参数 $\mu \in R, \sigma^2 >0$ 。
