@@ -737,12 +737,11 @@ p_k(x) &amp;=&amp; \lim_{\Delta x \rightarrow 0} \frac{F_k(x+\Delta x) - F_k(x)}
 <section class="theorem-content" id="proof-content">
 <p>对于统计量 <span class="math notranslate nohighlight">\((x_{(i)},x_{(j)})(i&lt;j)\)</span> 得联合分布密度函数为</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
+\[
 \begin{eqnarray*}
-p_{ij}(y,z) &amp;=&amp; \frac{n!}{(i-1)!(j-i-1)!(n-j)!} \\
-&amp;&amp;(F(y))^{i-1} (F(z)-F(y))^{j-i-1}(1-F(z))^{n-j}p(y)p(z), y\leq z.
+p_{ij}(y,z) &amp;=&amp; \frac{n!}{(i-1)!(j-i-1)!(n-j)!} (F(y))^{i-1} (F(z)-F(y))^{j-i-1}(1-F(z))^{n-j}p(y)p(z), y\leq z.
 \end{eqnarray*}
-\end{split}\]</div>
+\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Proof</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -752,8 +751,7 @@ p_{ij}(y,z) &amp;=&amp; \frac{n!}{(i-1)!(j-i-1)!(n-j)!} \\
 \[\begin{split}
 \begin{eqnarray*}
 &amp;&amp;P(x_{(i)}\in (y,y+\Delta y] , x_{(j)}\in (z,z+\Delta z]) \\
-&amp;\approx&amp; \frac{n!}{(i-1)!1!(j-i-1)!1!(n-j)!}(F(y))^{i-1} p(y)\Delta y\\
-&amp;&amp;(F(z) - F(y+\Delta y))^{j-i-1} p(z)\Delta z (1-F(z+\Delta z))^{n-j},
+&amp;\approx&amp; \frac{n!}{(i-1)!1!(j-i-1)!1!(n-j)!}(F(y))^{i-1} p(y)\Delta y (F(z) - F(y+\Delta y))^{j-i-1} p(z)\Delta z (1-F(z+\Delta z))^{n-j},
 \end{eqnarray*}
 \end{split}\]</div>
 <p class="sd-card-text">考虑到 <span class="math notranslate nohighlight">\(F(x)\)</span> 的连续性，当 <span class="math notranslate nohighlight">\(\Delta y \rightarrow 0, \Delta z \rightarrow 0\)</span> 时，有 <span class="math notranslate nohighlight">\(F(y+\Delta y) \rightarrow F(y),F(z+\Delta z) \rightarrow F(z)\)</span> ，于是</p>
@@ -761,8 +759,7 @@ p_{ij}(y,z) &amp;=&amp; \frac{n!}{(i-1)!(j-i-1)!(n-j)!} \\
 \[\begin{split}
 \begin{eqnarray*}
 p_{ij}(y,z) &amp;=&amp; \lim_{\Delta y \rightarrow 0,\Delta z \rightarrow 0} \frac{P(x_{(i)}\in (y,y+\Delta y] , x_{(j)}\in (z,z+\Delta z])}{\Delta y \cdot \Delta z}\\
-&amp;=&amp; \frac{n!}{(i-1)!1!(j-i-1)!1!(n-j)!}(F(y))^{i-1} p(y) \\
-&amp;&amp;(F(z) - F(y+\Delta y))^{j-i-1} p(z)(1-F(z+\Delta z))^{n-j}
+&amp;=&amp; \frac{n!}{(i-1)!1!(j-i-1)!1!(n-j)!}(F(y))^{i-1} p(y) (F(z) - F(y+\Delta y))^{j-i-1} p(z)(1-F(z+\Delta z))^{n-j}
 \end{eqnarray*}
 \end{split}\]</div>
 </div>
