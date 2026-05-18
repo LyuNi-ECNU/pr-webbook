@@ -74,8 +74,8 @@ sphinx:
       show_nav_depth: 3 
      
       launch_buttons:
-          binderhub_url: "https://mybinder.org" # 公共 Binder 服务
-          thebe: true
+        binderhub_url: "https://mybinder.org" # 公共 Binder 服务
+        thebe: true
         
       repository_url: https://github.com/LyuNi-ECNU/pr-webbook
       repository_branch: master
