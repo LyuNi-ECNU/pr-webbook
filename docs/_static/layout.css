@@ -1,0 +1,27 @@
+/*********************************************
+* Wide Layout Tuning *
+*********************************************/
+@media (min-width: 992px) {
+	.bd-sidebar-primary {
+		flex: 0 0 clamp(15rem, 16vw, 17rem);
+		width: clamp(15rem, 16vw, 17rem);
+	}
+
+	input#pst-primary-sidebar-checkbox:checked ~ .bd-container .bd-sidebar-primary {
+		margin-left: calc(-1 * clamp(15rem, 16vw, 17rem));
+	}
+}
+
+@media (min-width: 1200px) {
+	html {
+		--pst-sidebar-secondary: clamp(12rem, 13vw, 14rem);
+	}
+
+	.bd-page-width {
+		max-width: 104rem;
+	}
+
+	.bd-main .bd-content .bd-article-container {
+		max-width: calc(100% - var(--pst-sidebar-secondary));
+	}
+}
