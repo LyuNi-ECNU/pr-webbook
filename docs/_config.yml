@@ -66,14 +66,18 @@ sphinx:
       - layout.js
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js # 国外 Cloudflare CDN
 #      - https://cdn.bootcdn.net/ajax/libs/require.js/2.3.4/require.min.js # 国内 CDN
+
+    binderhub_url: "https://mybinder.org"
+    thebe: true
+    
     html_theme_options:
     # 关键：侧边栏最大深度 + 默认展开
       collapse_navigation: False
       show_nav_depth: 3 
      
-      launch_buttons:
-         binderhub_url: "https://mybinder.org" # 公共 Binder 服务
-         thebe: true
+      # launch_buttons:
+      #    binderhub_url: "https://mybinder.org" # 公共 Binder 服务
+      #    thebe: true
         
       repository_url: https://github.com/LyuNi-ECNU/pr-webbook
       repository_branch: master
