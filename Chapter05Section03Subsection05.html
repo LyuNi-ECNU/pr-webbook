@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; “概率论与数理统计”课程笔记</title>
+    <title>5.3.5. 贝塔分布 &#8212; “概率论与数理统计”课程笔记</title>
   
   
   
@@ -59,11 +59,15 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter05Section03Subsection05';</script>
     <script src="_static/layout.js?v=7d0cb861"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5.4. 习题" href="Chapter05Section04.html" />
+    <link rel="prev" title="5.3.4. 伽马分布" href="Chapter05Section03Subsection04.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -126,8 +130,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -176,7 +178,7 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">概率部分</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter01.html">1. 概率</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter01Section01.html">1.1. 引导问题：盲盒为什么受欢迎？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter01Section02.html">1.2. 随机事件</a></li>
@@ -210,12 +212,15 @@
 <li class="toctree-l2"><a class="reference internal" href="Chapter04Section06.html">4.6. 习题</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter05.html">5. 一元连续随机变量</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter05.html">5. 一元连续随机变量</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section01.html">5.1. 引导问题：对于早八点的课程，学生何时能到教室？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section02.html">5.2. 概率密度函数</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Chapter05Section03.html">5.3. 常见的连续随机变量</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection01.html">5.3.3. 均匀分布</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection02.html">5.3.4. 正态分布</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="Chapter05Section03.html">5.3. 常见的连续随机变量</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection01.html">5.3.1. 均匀分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection02.html">5.3.2. 正态分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection03.html">5.3.3. 指数分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection04.html">5.3.4. 伽马分布</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.3.5. 贝塔分布</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section04.html">5.4. 习题</a></li>
@@ -575,9 +580,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -588,19 +591,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>贝塔分布</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -610,7 +605,136 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">5.3.5. </span>贝塔分布<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<dl class="simple myst">
+<dt>贝塔函数</dt><dd><p>称</p>
+</dd>
+</dl>
+<div class="math notranslate nohighlight">
+\[
+B(a,b)=\int_{0}^{1} x^{a-1} (1-x)^{b-1} dx,a&gt;0,b&gt;0
+\]</div>
+<p>为贝塔函数。</p>
+<p>根据贝塔函数的定义，可以证明贝塔函数的一些常用性质。</p>
+<div class="proof property admonition" id="property-0">
+<p class="admonition-title"><span class="caption-number">Property 5.2 </span></p>
+<section class="property-content" id="proof-content">
+<ol class="arabic simple">
+<li></li>
+<li><p><span class="math notranslate nohighlight">\(B(a,b)=B(b,a)\)</span> ；</p></li>
+<li><p><span class="math notranslate nohighlight">\(B(a,b)=\frac{\Gamma (a)\Gamma (b)}{\Gamma (a+b)}\)</span> 。</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Proof</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">由伽马函数的定义可知：</p>
+<div class="math notranslate nohighlight">
+\[
+\Gamma (a)\Gamma (b)=\int_{0}^{+\infty } \int_{0}^{+\infty } x^{a-1} y^{b-1} e^{-(x+y)} dxdy
+\]</div>
+<p class="sd-card-text">作变量变换：</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{\begin{matrix}
+x=uv\\
+y=u(1-v)
+\end{matrix}\right.\Longrightarrow
+\left\{\begin{matrix}
+u=x+y\\
+v=\frac{u}{x} % Keeping the original LaTeX expression here.
+\end{matrix}\right.\Longrightarrow
+J=\begin{vmatrix}
+v&amp;u \\
+(1-v)&amp;-u
+\end{vmatrix}=-u
+\end{split}\]</div>
+<p class="sd-card-text">故：</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+     \Gamma (a)\Gamma (b)
+   &amp;=&amp;\int_{0}^{1 } \int_{0}^{+\infty } (uv)^{a-1} (u(1-v))^{b-1} e^{-u} ududv\\
+   &amp;=&amp; \int_{0}^{+\infty } u^{a+b-1}e^{-u}du \cdot \int_{0}^{1 }v^{a-1}(1-v)^{b-1}dv\\
+   &amp;=&amp;\Gamma (a+b)B(a,b).
+\end{eqnarray*}\end{split}\]</div>
+</div>
+</details></section>
+</div><p>基于贝塔函数，我们来定义贝塔分布。</p>
+<dl class="simple myst">
+<dt>贝塔分布</dt><dd><p>假设一随机变量 <span class="math notranslate nohighlight">\(X\)</span> ，其密度函数为：</p>
+</dd>
+</dl>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+p(x)=\left\{\begin{matrix}
+    \frac{\Gamma (a+b)}{\Gamma (a)\Gamma (b)}x^{a-1} (1-x)^{b-1}, &amp;0&lt;x&lt;1, \\
+    0,&amp; \text{其他}.
+    \end{matrix}\right.
+\end{split}\]</div>
+<p>则称 <span class="math notranslate nohighlight">\(X\)</span> 的分布为贝塔分布，记 <span class="math notranslate nohighlight">\(X\sim Be(a,b)\)</span> ，其中 <span class="math notranslate nohighlight">\(a&gt;0,b&gt;0\)</span> 均为形状参数。</p>
+<div class="proof remark admonition" id="remark-1">
+<p class="admonition-title"><span class="caption-number">Remark 5.7 </span></p>
+<section class="remark-content" id="proof-content">
+<p>特别地，当 <span class="math notranslate nohighlight">\(a=1,b=1\)</span> 时， <span class="math notranslate nohighlight">\(Be(1,1) = U(0,1)\)</span> 。</p>
+</section>
+</div><div class="thebe highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">prompt_float</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;请输入有效的小数。&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">read_parameters</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Uniform Distribution Visualizer&quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">prompt_float</span><span class="p">(</span><span class="s2">&quot;请输入下限 a（可为负，例如 0）: &quot;</span><span class="p">)</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">prompt_float</span><span class="p">(</span><span class="s2">&quot;请输入上限 b（需大于 a，例如 1）: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">b</span> <span class="o">&lt;=</span> <span class="n">a</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;必须满足 b &gt; a，请重新输入。</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_uniform_distribution</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">a</span>
+    <span class="n">margin</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">x_min</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">margin</span>
+    <span class="n">x_max</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">margin</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="n">pdf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">a</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">pdf</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;skyblue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;skyblue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Random variable X&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Density f(X)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Uniform Distribution U(</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">pdf</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">read_parameters</span><span class="p">()</span>
+    <span class="n">plot_uniform_distribution</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -641,27 +765,30 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter05Section03Subsection04.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5.3.4. </span>伽马分布</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Chapter05Section04.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5.4. </span>习题</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>

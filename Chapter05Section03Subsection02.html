@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5.3.4. 正态分布 &#8212; “概率论与数理统计”课程笔记</title>
+    <title>5.3.2. 正态分布 &#8212; “概率论与数理统计”课程笔记</title>
   
   
   
@@ -66,8 +66,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5.4. 习题" href="Chapter05Section04.html" />
-    <link rel="prev" title="5.3.3. 均匀分布" href="Chapter05Section03Subsection01.html" />
+    <link rel="next" title="5.3.3. 指数分布" href="Chapter05Section03Subsection03.html" />
+    <link rel="prev" title="5.3.1. 均匀分布" href="Chapter05Section03Subsection01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -216,8 +216,11 @@
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section01.html">5.1. 引导问题：对于早八点的课程，学生何时能到教室？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section02.html">5.2. 概率密度函数</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="Chapter05Section03.html">5.3. 常见的连续随机变量</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection01.html">5.3.3. 均匀分布</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.3.4. 正态分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection01.html">5.3.1. 均匀分布</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.3.2. 正态分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection03.html">5.3.3. 指数分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection04.html">5.3.4. 伽马分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection05.html">5.3.5. 贝塔分布</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section04.html">5.4. 习题</a></li>
@@ -603,7 +606,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><span class="section-number">5.3.4. </span>正态分布<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">5.3.2. </span>正态分布<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <dl class="simple myst">
 <dt>正态分布</dt><dd><p>设定义在区间 <span class="math notranslate nohighlight">\((-\infty,\infty)\)</span> 的一个随机变量 <span class="math notranslate nohighlight">\(X\)</span> 。 <span class="math notranslate nohighlight">\(X\)</span> 的概率密度函数为：</p>
 </dd>
@@ -614,7 +617,7 @@ p(x) =\frac{1}{\sqrt{2\pi \sigma^2}} \exp\left\{-\frac{1}{2\sigma^2} (x-\mu)^2\r
 \]</div>
 <p>称 <span class="math notranslate nohighlight">\(X\)</span> 的分布为正态分布。记 <span class="math notranslate nohighlight">\(X\sim N(\mu,\sigma^2)\)</span> ，其中参数 <span class="math notranslate nohighlight">\(\mu \in R, \sigma^2 &gt;0\)</span> 。</p>
 <div class="proof remark admonition" id="remark-0">
-<p class="admonition-title"><span class="caption-number">Remark 5.5 </span></p>
+<p class="admonition-title"><span class="caption-number">Remark 5.3 </span></p>
 <section class="remark-content" id="proof-content">
 <ol class="arabic simple">
 <li><p>正态分布是最早由法国数学家棣莫弗（Abraham de Moivre）在近似二项分布时得到的，后由德国数学家高斯（Carolus Fridericus Gauss）在测量误差时导出。因高斯的工作对后世的贡献巨大，所以，正态分布又称<strong>高斯分布</strong>。</p></li>
@@ -690,7 +693,7 @@ p(x) =\frac{1}{\sqrt{2\pi \sigma^2}} \exp\left\{-\frac{1}{2\sigma^2} (x-\mu)^2\r
 \]</div>
 <p>其中有个极为特殊的正态分布——标准正态分布，即 <span class="math notranslate nohighlight">\(\mu = 0,\sigma^2 = 1\)</span> 。下面我们具体讲解。</p>
 <div class="proof remark admonition" id="remark-1">
-<p class="admonition-title"><span class="caption-number">Remark 5.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Remark 5.4 </span></p>
 <section class="remark-content" id="proof-content">
 <ol class="arabic simple">
 <li><p>标准正态分布的密度函数为：</p></li>
@@ -751,7 +754,7 @@ Z=\frac{x-\mu }{\sigma } \sim N(0,1)
 \]</div>
 </section>
 </div><div class="proof remark admonition" id="remark-3">
-<p class="admonition-title"><span class="caption-number">Remark 5.7 </span></p>
+<p class="admonition-title"><span class="caption-number">Remark 5.5 </span></p>
 <section class="remark-content" id="proof-content">
 <p><span class="math notranslate nohighlight">\(3\sigma\)</span> 原则：</p>
 <ol class="arabic simple">
@@ -798,15 +801,15 @@ Z=\frac{x-\mu }{\sigma } \sim N(0,1)
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.3.3. </span>均匀分布</p>
+        <p class="prev-next-title"><span class="section-number">5.3.1. </span>均匀分布</p>
       </div>
     </a>
     <a class="right-next"
-       href="Chapter05Section04.html"
+       href="Chapter05Section03Subsection03.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.4. </span>习题</p>
+        <p class="prev-next-title"><span class="section-number">5.3.3. </span>指数分布</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
