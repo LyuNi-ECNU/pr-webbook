@@ -70,6 +70,10 @@ sphinx:
       launch_buttons:
         binderhub_url: "https://mybinder.org" # 公共 Binder 服务
         thebe: true
+        
+# 关键：侧边栏最大深度 + 默认展开
+      collapse_navigation: False
+      show_nav_depth: 3 
 
       repository_url: https://github.com/LyuNi-ECNU/pr-webbook
       repository_branch: master
