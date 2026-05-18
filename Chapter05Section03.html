@@ -66,7 +66,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5.3.5. 均匀分布" href="Chapter05Section03Subsection01.html" />
+    <link rel="next" title="5.3.3. 均匀分布" href="Chapter05Section03Subsection01.html" />
     <link rel="prev" title="5.2. 概率密度函数" href="Chapter05Section02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -216,8 +216,8 @@
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section01.html">5.1. 引导问题：对于早八点的课程，学生何时能到教室？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section02.html">5.2. 概率密度函数</a></li>
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">5.3. 常见的连续随机变量</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection01.html">5.3.5. 均匀分布</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection02.html">5.3.6. 正态分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection01.html">5.3.3. 均匀分布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter05Section03Subsection02.html">5.3.4. 正态分布</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter05Section04.html">5.4. 习题</a></li>
@@ -666,10 +666,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.3.1. 正态分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.3.2. 指数分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.3.3. 伽马分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.3.4. 贝塔分布</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.3.1. 伽马分布</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.3.2. 贝塔分布</a></li>
 </ul>
             </nav>
         </div>
@@ -684,309 +682,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1><span class="section-number">5.3. </span>常见的连续随机变量<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2><span class="section-number">5.3.1. </span>正态分布<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<dl class="simple myst">
-<dt>正态分布</dt><dd><p>设定义在区间 <span class="math notranslate nohighlight">\((-\infty,\infty)\)</span> 的一个随机变量 <span class="math notranslate nohighlight">\(X\)</span> 。 <span class="math notranslate nohighlight">\(X\)</span> 的概率密度函数为：</p>
-</dd>
-</dl>
-<div class="math notranslate nohighlight">
-\[
-p(x) =\frac{1}{\sqrt{2\pi \sigma^2}}\exp\left\{-\frac{1}{2\sigma^2} (x-\mu)^2\right\}, x \in R
-\]</div>
-<p>称 <span class="math notranslate nohighlight">\(X\)</span> 的分布为正态分布。记 <span class="math notranslate nohighlight">\(X\sim N(\mu,\sigma^2)\)</span> ，其中参数 <span class="math notranslate nohighlight">\(\mu \in R, \sigma^2 &gt;0\)</span> 。</p>
-<div class="proof remark admonition" id="remark-0">
-<p class="admonition-title"><span class="caption-number">Remark 5.3 </span></p>
-<section class="remark-content" id="proof-content">
-<ol class="arabic simple">
-<li><p>正态分布是最早由法国数学家棣莫弗（Abraham de Moivre）在近似二项分布时得到的，后由德国数学家高斯（Carolus Fridericus Gauss）在测量误差时导出。因高斯的工作对后世的贡献巨大，所以，正态分布又称<strong>高斯分布</strong>。</p></li>
-<li><p>概率密度函数 <span class="math notranslate nohighlight">\(p(x)\)</span> 是一条钟型曲线，特点为：中间高，两边低，左右对称。</p></li>
-<li><p>正态分布的两个参数 <span class="math notranslate nohighlight">\(\mu\)</span> 和 <span class="math notranslate nohighlight">\(\sigma^2\)</span> 是决定密度函数位置和形状，称 <span class="math notranslate nohighlight">\(\mu\)</span> 为位置参数， <span class="math notranslate nohighlight">\(\sigma^2\)</span> 是尺度参数。</p></li>
-</ol>
-</section>
-</div><div class="thebe highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">prompt_float</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;请输入有效的小数。&quot;</span><span class="p">)</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">prompt_positive_float</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;请输入有效的小数。&quot;</span><span class="p">)</span>
-            <span class="k">continue</span>
-        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;参数必须大于 0。&quot;</span><span class="p">)</span>
-            <span class="k">continue</span>
-        <span class="k">return</span> <span class="n">value</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">read_parameters</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Normal Distribution Visualizer&quot;</span><span class="p">)</span>
-    <span class="n">mean</span> <span class="o">=</span> <span class="n">prompt_float</span><span class="p">(</span><span class="s2">&quot;请输入均值 μ（例如 0）: &quot;</span><span class="p">)</span>
-    <span class="n">variance</span> <span class="o">=</span> <span class="n">prompt_positive_float</span><span class="p">(</span><span class="s2">&quot;请输入方差 σ^2（&gt;0，例如 1）: &quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">mean</span><span class="p">,</span> <span class="n">variance</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">plot_normal_distribution</span><span class="p">(</span><span class="n">mean</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">variance</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">std_dev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
-    <span class="n">span</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">std_dev</span><span class="p">)</span>  <span class="c1"># cover most of the density even when mean/variance shift</span>
-    <span class="n">x_min</span> <span class="o">=</span> <span class="n">mean</span> <span class="o">-</span> <span class="n">span</span>
-    <span class="n">x_max</span> <span class="o">=</span> <span class="n">mean</span> <span class="o">+</span> <span class="n">span</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">variance</span><span class="p">)))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">variance</span><span class="p">))</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;skyblue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Random variable X&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Density f(X)&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Normal Distribution: mean=</span><span class="si">{</span><span class="n">mean</span><span class="si">}</span><span class="s2">, variance=</span><span class="si">{</span><span class="n">variance</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.2</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-    <span class="n">mean</span><span class="p">,</span> <span class="n">variance</span> <span class="o">=</span> <span class="n">read_parameters</span><span class="p">()</span>
-    <span class="n">plot_normal_distribution</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">variance</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>这里很自然我们构建一个正态分布类，即：</p>
-<div class="math notranslate nohighlight">
-\[
-\mathcal{P} = \{N(\mu,\sigma^2):\mu \in R, \sigma^2 &gt;0\}
-\]</div>
-<p>其中有个极为特殊的正态分布——标准正态分布，即 <span class="math notranslate nohighlight">\(\mu = 0,\sigma^2 = 1\)</span> 。下面我们具体讲解。</p>
-<div class="proof remark admonition" id="remark-1">
-<p class="admonition-title"><span class="caption-number">Remark 5.4 </span></p>
-<section class="remark-content" id="proof-content">
-<ol class="arabic simple">
-<li><p>标准正态分布的密度函数为：</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\phi(z) = \frac{1}{\sqrt{2\pi}} \exp\left\{-\frac{1}{2}z^2\right\}
-\]</div>
-<ol class="arabic simple" start="2">
-<li><p>标准正态分布的分布函数为：</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\Phi(z) = \int_{-\infty}^z \phi(x)\text{d} x
-\]</div>
-<ol class="arabic" start="3">
-<li><p>标准正态分布的概率计算常用公式：</p>
-<p>a. <span class="math notranslate nohighlight">\(\Phi (-z)=P(Z\le -z)=P(Z\ge z)=1-\Phi(z)\)</span><br />
-b. <span class="math notranslate nohighlight">\(P(Z&gt;z)=1-\Phi(z)\)</span><br />
-c. <span class="math notranslate nohighlight">\(P(a&lt;Z&lt;b)=\Phi(b)-\Phi(a)\)</span><br />
-d. <span class="math notranslate nohighlight">\(P(\left | Z \right | &lt;c)=2\Phi(c)-1， (c\ge 0)\)</span></p>
-</li>
-</ol>
-</section>
-</div><div class="proof theorem admonition" id="property:standard_normal">
-<p class="admonition-title"><span class="caption-number">Theorem 5.2 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>若随机变量 <span class="math notranslate nohighlight">\(X\sim N(\mu,\sigma^{2})\)</span> ，则 <span class="math notranslate nohighlight">\(Z=\frac{x-\mu }{\sigma } \sim N(0,1)\)</span> 。</p>
-<p>记 <span class="math notranslate nohighlight">\(X\)</span> 和 <span class="math notranslate nohighlight">\(Z\)</span> 的分布函数分别为 <span class="math notranslate nohighlight">\(F_{X}(x)\)</span> 和 <span class="math notranslate nohighlight">\(F_{Z}(z)\)</span> ，密度函数分别为 <span class="math notranslate nohighlight">\(p_{X}(x)\)</span> 和 <span class="math notranslate nohighlight">\(p_{Z}(z)\)</span> 。</p>
-<p>则由分布函数的定义可知：</p>
-<div class="math notranslate nohighlight" id="equation-eq-chap04-proof-normal-step1">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-chap04-proof-normal-step1" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
-F_{Z}(z)
-&amp;=P(Z\le z)\\
-&amp;=P\left(\frac{X-\mu }{\sigma } \le z\right)\\
-&amp;=P(X\le \mu +\sigma z )\\ % Corrected typo from original LaTeX
-&amp;=F_{X} (\mu +\sigma z)
-\end{aligned}\end{split}\]</div>
-<p>由于正态分布函数是严格单调递增且处处可导。因此：</p>
-<div class="math notranslate nohighlight" id="equation-eq-chap04-proof-normal-step2">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-chap04-proof-normal-step2" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}
-p_{Z}(z)
-&amp;=\frac{\mathrm{d}}{\mathrm{d} z} F_{Z}(z)\\
-&amp;=\frac{\mathrm{d}}{\mathrm{d} z} F_{X}(\mu +\sigma z)\\
-&amp;= p_{X}(\mu +\sigma z)\cdot \sigma \\
-&amp;=\frac{1}{\sqrt{2\pi \sigma ^{2}} } \exp\left\{-\frac{1}{2\sigma ^{2}}(\mu +\sigma z -\mu )^{2} \right\}\cdot \sigma \\
-&amp;=\frac{1}{\sqrt{2\pi \sigma ^{2}} } \exp\left\{-\frac{(\sigma z)^{2}}{2\sigma ^{2}} \right\}\cdot \sigma \\
-&amp;=\frac{1}{\sqrt{2\pi \sigma ^{2}} } \exp\left\{-\frac{\sigma^2 z^{2}}{2\sigma ^{2}} \right\}\cdot \sigma \\
-&amp;=\frac{1}{\sqrt{2\pi \sigma ^{2}} } \exp\left\{-\frac{z^{2}}{2} \right\}\cdot \sigma \\
-&amp;=\frac{\sigma}{\sqrt{2\pi \sigma ^{2}} } \exp\left\{-\frac{z^{2}}{2} \right\}\\
-&amp;=\frac{\sigma}{\sigma\sqrt{2\pi } } \exp\left\{-\frac{z^{2}}{2} \right\}\\
-&amp;=\frac{1}{\sqrt{2\pi } } \exp\left\{-\frac{z^{2}}{2} \right\}\\
-\end{aligned}\end{split}\]</div>
-<p>由此可得：</p>
-<div class="math notranslate nohighlight">
-\[
-Z=\frac{x-\mu }{\sigma } \sim N(0,1)
-\]</div>
-</section>
-</div><div class="proof remark admonition" id="remark-3">
-<p class="admonition-title"><span class="caption-number">Remark 5.5 </span></p>
-<section class="remark-content" id="proof-content">
-<p><span class="math notranslate nohighlight">\(3\sigma\)</span> 原则：</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(P(\mu -\sigma &lt;X&lt;\mu +\sigma )=2\Phi(1)-1\approx 0.6826\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(P(\mu -2\sigma &lt;X&lt;\mu +2\sigma )=2\Phi(2)-1\approx 0.9545\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(P(\mu -3\sigma &lt;X&lt;\mu +\sigma )=2\Phi(3)-1\approx 0.9973\)</span></p></li>
-</ol>
-</section>
-</div></section>
-<section id="id3">
-<h2><span class="section-number">5.3.2. </span>指数分布<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<dl class="simple myst">
-<dt>指数分布</dt><dd><p>设一随机变量 <span class="math notranslate nohighlight">\(X\)</span> ，其密度函数为：</p>
-</dd>
-</dl>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-p(x)=\left\{\begin{matrix}
-\lambda e^{-\lambda x} ,&amp;x\ge 0 \\
-0,&amp;x&lt;0
-\end{matrix}\right.
-\end{split}\]</div>
-<p>则称 <span class="math notranslate nohighlight">\(X\)</span> 的分布为指数分布，记 <span class="math notranslate nohighlight">\(X\sim Exp(\lambda)\)</span> ，其中参数 <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span> 。</p>
-<p>根据随机变量的密度函数，可以计算其分布函数为：</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-F_{X} (x) = \left\{\begin{matrix}
-\int_{0}^{x}p(t)dt=\int_{0}^{x}\lambda e^{-\lambda t} dt= e^{-\lambda t}|_{0}^{x} =1-e^{-\lambda x} ,&amp;x\ge 0 \\
-0,&amp;x&lt;0
-\end{matrix}\right.
-\end{split}\]</div>
-<p>类似于几何分布，指数分布也具有无记忆性。</p>
-<div class="proof theorem admonition" id="property:no_memory_expential">
-<p class="admonition-title"><span class="caption-number">Theorem 5.3 </span> (指数分布的无记忆性)</p>
-<section class="theorem-content" id="proof-content">
-<p>如果随机变量 <span class="math notranslate nohighlight">\(X\sim Exp(\lambda)\)</span> ，则对任意 <span class="math notranslate nohighlight">\(s&gt;0,t&gt;0\)</span> 有：</p>
-<div class="math notranslate nohighlight">
-\[
-P(X&gt;t+s|X&gt;s)=P(X&gt;t)
-\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Proof</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">因为 <span class="math notranslate nohighlight">\(X\sim Exp(\lambda)\)</span> ，所以 <span class="math notranslate nohighlight">\(P(X&gt;s)=e^{-\lambda s},s&gt;0\)</span> 。又因为 <span class="math notranslate nohighlight">\(\left \{ X&gt;s+t \right \} \subset \left \{ X&gt;s \right \}\)</span> ，于是，条件概率：</p>
-<div class="math notranslate nohighlight">
-\[
-P(X&gt;s+t|X&gt;s)=\frac{P(X&gt;s+t)}{P(X&gt;s)}=\frac{e^{-\lambda (s+t)} }{e^{-\lambda s} }=e^{-\lambda t}
-\]</div>
-</div>
-</details></section>
-</div><div class="thebe highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">prompt_positive_float</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;请输入有效的小数。&quot;</span><span class="p">)</span>
-            <span class="k">continue</span>
-        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;参数必须大于 0。&quot;</span><span class="p">)</span>
-            <span class="k">continue</span>
-        <span class="k">return</span> <span class="n">value</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">read_parameter</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exponential Distribution Visualizer&quot;</span><span class="p">)</span>
-    <span class="n">lambd</span> <span class="o">=</span> <span class="n">prompt_positive_float</span><span class="p">(</span><span class="s2">&quot;请输入参数 λ（&gt;0，例如 1）: &quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">lambd</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">plot_exponential_distribution</span><span class="p">(</span><span class="n">lambd</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">x_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">5.0</span> <span class="o">/</span> <span class="n">lambd</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-    <span class="n">pdf</span> <span class="o">=</span> <span class="n">lambd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">lambd</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
-    <span class="n">x_threshold</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="n">exceed_prob</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">lambd</span> <span class="o">*</span> <span class="n">x_threshold</span><span class="p">)</span>
-    <span class="n">exceed_pct</span> <span class="o">=</span> <span class="n">exceed_prob</span> <span class="o">*</span> <span class="mi">100</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;skyblue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;PDF (λ=</span><span class="si">{</span><span class="n">lambd</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
-
-    <span class="n">mask</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">x_threshold</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">pdf</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-                     <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;P(X &gt; </span><span class="si">{</span><span class="n">x_threshold</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">exceed_pct</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
-
-    <span class="n">peak_y</span> <span class="o">=</span> <span class="n">lambd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">lambd</span> <span class="o">*</span> <span class="p">(</span><span class="n">x_threshold</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">exceed_pct</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>
-                 <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x_threshold</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">peak_y</span><span class="p">),</span>
-                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">x_threshold</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">peak_y</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">),</span>
-                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">8</span><span class="p">),</span>
-                 <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time interval X&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Density f(X)&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Exponential Distribution and Tail Probability&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pdf</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.2</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figtext</span><span class="p">(</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>
-                <span class="s2">&quot;Notes:</span><span class="se">\n</span><span class="s2">&quot;</span>
-                <span class="s2">&quot;1. Memoryless property: P(X&gt;s+t | X&gt;s) = P(X&gt;t).</span><span class="se">\n</span><span class="s2">&quot;</span>
-                <span class="sa">f</span><span class="s2">&quot;2. Shaded area represents P(X &gt; </span><span class="si">{</span><span class="n">x_threshold</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">,</span>
-                <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.97</span><span class="p">])</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-    <span class="n">lambd</span> <span class="o">=</span> <span class="n">read_parameter</span><span class="p">()</span>
-    <span class="n">plot_exponential_distribution</span><span class="p">(</span><span class="n">lambd</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>泊松分布与指数分布有非常紧密的关系，我们利用以下一个例子来说明。</p>
-<div class="proof example admonition" id="example-5">
-<p class="admonition-title"><span class="caption-number">Example 5.4 </span></p>
-<section class="example-content" id="proof-content">
-<p>如果某设备在长为 <span class="math notranslate nohighlight">\(t\)</span> 的时间 <span class="math notranslate nohighlight">\((0,t)\)</span> 内发生故障的次数 <span class="math notranslate nohighlight">\(N(t)\)</span> （与时间长度 <span class="math notranslate nohighlight">\(t\)</span> 有关）服从参数为 <span class="math notranslate nohighlight">\(\lambda t\)</span> 的泊松分布，且 <span class="math notranslate nohighlight">\(N(0)=0\)</span> ，则从 <span class="math notranslate nohighlight">\(0\)</span> 时开始首次发生故障的时间 <span class="math notranslate nohighlight">\(T\)</span> 服从参数为 <span class="math notranslate nohighlight">\(\lambda\)</span> 的指数分布。</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">设 <span class="math notranslate nohighlight">\(N(t)\sim P(\lambda t)\)</span> ，即：</p>
-<div class="math notranslate nohighlight">
-\[
-P(N(t)=k)=\frac{(\lambda t)^{k} }{k!} e^{-\lambda t} ,k=0,1,\cdots
-\]</div>
-<p class="sd-card-text">注意到从 <span class="math notranslate nohighlight">\(0\)</span> 时开始首次发生故障的时间 <span class="math notranslate nohighlight">\(T\)</span> 是非负随机变量且事件 <span class="math notranslate nohighlight">\(\left \{ T\geq t \right \}\)</span> 说明此设备在 <span class="math notranslate nohighlight">\(\left [ 0,t \right ]\)</span> 内没有发生故障。即 <span class="math notranslate nohighlight">\(\left \{ T\geq t \right \} =\left \{ N(t)=0 \right \} .\)</span> 由此可得：</p>
-<ul class="simple">
-<li><p class="sd-card-text">当 <span class="math notranslate nohighlight">\(t&lt;0\)</span> 时，有：</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-F_{T} (t)=P(T\le t)=0
-\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">当 <span class="math notranslate nohighlight">\(t\geq 0\)</span> 时，有：</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-F_{T} (t)=P(T\le t)=1-P(T&gt; t) = 1-P(T\geq t)=1-P(N(t)=0)=1-e^{-\lambda t}
-\]</div>
-<p class="sd-card-text">因此， <span class="math notranslate nohighlight">\(T\sim {Exp}(\lambda)\)</span> ，即从 <span class="math notranslate nohighlight">\(0\)</span> 时开始首次发生故障的时间 <span class="math notranslate nohighlight">\(T\)</span> 服从参数为 <span class="math notranslate nohighlight">\(\lambda\)</span> 的指数分布。</p>
-</div>
-</details></section>
-</div></section>
-<section id="id4">
-<h2><span class="section-number">5.3.3. </span>伽马分布<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.3.1. </span>伽马分布<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <dl class="simple myst">
 <dt>伽马函数</dt><dd><p>称</p>
 </dd>
@@ -997,7 +693,7 @@ F_{T} (t)=P(T\le t)=1-P(T&gt; t) = 1-P(T\geq t)=1-P(N(t)=0)=1-e^{-\lambda t}
 \]</div>
 <p>为伽马函数。</p>
 <p>根据伽马函数的定义，可以证明伽马函数的一些常用性质。</p>
-<div class="proof property admonition" id="property-6">
+<div class="proof property admonition" id="property-0">
 <p class="admonition-title"><span class="caption-number">Property 5.1 </span></p>
 <section class="property-content" id="proof-content">
 <ol class="arabic simple">
@@ -1044,8 +740,8 @@ p(x)=\left\{\begin{matrix} \frac{\lambda ^{\alpha } }{\Gamma (\alpha )}x^{\alpha
 0&amp;,x&lt;0\end{matrix}\right.
 \end{split}\]</div>
 <p>则称其分布为伽马分布，记作 <span class="math notranslate nohighlight">\(X\sim Ga(\alpha,\lambda)\)</span> ，其中 <span class="math notranslate nohighlight">\(\alpha&gt;0\)</span> 为形状参数， <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span> 为尺度参数。</p>
-<div class="proof remark admonition" id="remark-7">
-<p class="admonition-title"><span class="caption-number">Remark 5.6 </span></p>
+<div class="proof remark admonition" id="remark-1">
+<p class="admonition-title"><span class="caption-number">Remark 5.3 </span></p>
 <section class="remark-content" id="proof-content">
 <p>当 <span class="math notranslate nohighlight">\(\alpha = 1\)</span> 时， <span class="math notranslate nohighlight">\(Ga(1,\lambda)=Exp(\lambda)\)</span> 。</p>
 </section>
@@ -1104,8 +800,8 @@ p(x)=\left\{\begin{matrix} \frac{\lambda ^{\alpha } }{\Gamma (\alpha )}x^{\alpha
 </pre></div>
 </div>
 <p>以下例子讲解了泊松分布与伽马分布之间的关系，和之前讲解过的关于泊松分布与指数分布之间的关系的证明过程类似，供学生课后自学。</p>
-<div class="proof example admonition" id="example-8">
-<p class="admonition-title"><span class="caption-number">Example 5.5 </span></p>
+<div class="proof example admonition" id="example-2">
+<p class="admonition-title"><span class="caption-number">Example 5.4 </span></p>
 <section class="example-content" id="proof-content">
 <p>若在 <span class="math notranslate nohighlight">\((0,t)\)</span> 内发生冲击的次数 <span class="math notranslate nohighlight">\(N(t)\)</span> 服从参数为 <span class="math notranslate nohighlight">\(\lambda t\)</span> 的泊松分布，试证明第 <span class="math notranslate nohighlight">\(n\)</span> 次冲击来到的时间 <span class="math notranslate nohighlight">\(S_{n}\)</span> 服从伽马分布 <span class="math notranslate nohighlight">\(Ga(n,\lambda)\)</span> 。</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1167,8 +863,8 @@ b_{1} &amp;=\frac{\lambda }{\Gamma (1)}\int_{t}^{+\infty } e^{-\lambda x} dx\\
 </div>
 </details></section>
 </div></section>
-<section id="id5">
-<h2><span class="section-number">5.3.4. </span>贝塔分布<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2><span class="section-number">5.3.2. </span>贝塔分布<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <dl class="simple myst">
 <dt>贝塔函数</dt><dd><p>称</p>
 </dd>
@@ -1179,7 +875,7 @@ B(a,b)=\int_{0}^{1} x^{a-1} (1-x)^{b-1} dx,a&gt;0,b&gt;0
 \]</div>
 <p>为贝塔函数。</p>
 <p>根据贝塔函数的定义，可以证明贝塔函数的一些常用性质。</p>
-<div class="proof property admonition" id="property-9">
+<div class="proof property admonition" id="property-3">
 <p class="admonition-title"><span class="caption-number">Property 5.2 </span></p>
 <section class="property-content" id="proof-content">
 <ol class="arabic simple">
@@ -1233,8 +929,8 @@ p(x)=\left\{\begin{matrix}
     \end{matrix}\right.
 \end{split}\]</div>
 <p>则称 <span class="math notranslate nohighlight">\(X\)</span> 的分布为贝塔分布，记 <span class="math notranslate nohighlight">\(X\sim Be(a,b)\)</span> ，其中 <span class="math notranslate nohighlight">\(a&gt;0,b&gt;0\)</span> 均为形状参数。</p>
-<div class="proof remark admonition" id="remark-10">
-<p class="admonition-title"><span class="caption-number">Remark 5.7 </span></p>
+<div class="proof remark admonition" id="remark-4">
+<p class="admonition-title"><span class="caption-number">Remark 5.4 </span></p>
 <section class="remark-content" id="proof-content">
 <p>特别地，当 <span class="math notranslate nohighlight">\(a=1,b=1\)</span> 时， <span class="math notranslate nohighlight">\(Be(1,1) = U(0,1)\)</span> 。</p>
 </section>
@@ -1344,7 +1040,7 @@ p(x)=\left\{\begin{matrix}
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.3.5. </span>均匀分布</p>
+        <p class="prev-next-title"><span class="section-number">5.3.3. </span>均匀分布</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1364,10 +1060,8 @@ p(x)=\left\{\begin{matrix}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.3.1. 正态分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.3.2. 指数分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.3.3. 伽马分布</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.3.4. 贝塔分布</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.3.1. 伽马分布</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.3.2. 贝塔分布</a></li>
 </ul>
   </nav></div>
 
