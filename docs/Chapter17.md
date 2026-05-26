@@ -14,7 +14,7 @@
 在本讲中，我们会给出正态分布总体下样本均值与样本方差的分布，并为之后在估计和检验任务中所需要的统计量做准备。本讲的内容可以参考图 {numref}`fig:lect17_framework` 
 ```{figure} /fig/Lect16_relation_of_distributions_from_normality.png
 :name: fig:lect17_framework
-:width: 300ptx
+:width: 100ptx
 
 本讲内容框架
 ```
