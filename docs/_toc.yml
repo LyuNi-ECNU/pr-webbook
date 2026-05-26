@@ -138,6 +138,10 @@ parts:
         sections:
           - file: Chapter17Section01
           - file: Chapter17Section02
+            sections:
+              - file: Chapter17Section02Subsection01
+              - file: Chapter17Section02Subsection02
+              - file: Chapter17Section02Subsection03
           - file: Chapter17Section03
           - file: Chapter17Section04
       - file: Chapter18
